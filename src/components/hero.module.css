@@ -1,0 +1,61 @@
+.hero {
+  align-items: flex-end;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100px;
+  position: relative;
+}
+
+.image {
+  /*
+    Ensure golden ratio for the hero size while limiting it to some extend to
+    the viewport width
+  */
+  height: 61.8vh;
+  max-height: 560px;
+  width: 100%;
+}
+
+.details {
+  max-width: 40rem;
+  position: absolute;
+}
+
+.title {
+  letter-spacing: -0.012em;
+  font-weight: var(--extrabold);
+  font-size: var(--text-title);
+  line-height: 1.4em;
+  margin: 0 10px;
+}
+
+.title_span {
+  background: var(--yellow);
+  padding: 5px;
+}
+
+.content {
+  font-size: var(--text-lead);
+  font-weight: var(--semibold);
+}
+
+@media (min-width: 768px) {
+  .hero {
+  }
+
+  .details {
+    max-width: 44rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    margin-left: auto;
+    width: 85%;
+  }
+
+  .details {
+    left: 24px;
+  }
+}
