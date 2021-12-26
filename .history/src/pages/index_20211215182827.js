@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import yuto from '../pics/54499.jpg'
+import GeneralList from '../components/general-list'
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
@@ -14,7 +15,7 @@ const RootIndex = ({ data }) => {
 
   const YutoImage = styled.img`
     max-width: 300px;
-    padding: 30px 40px;
+    padding: 20px 40px;
     float: left;
 
     @media (max-width: 600px) {
@@ -34,14 +35,12 @@ const RootIndex = ({ data }) => {
     }
   `
 
-  const news = posts[1]
-
   return (
     <Layout>
       <div className={styles.layout}>
         <Container className={styles.container}>
           <div>
-            <Seo title="About" />
+            <Seo title={posts[0].title} />
             <Hero title={posts[0].title} />
             <div className={styles.container2}>
               <Wrapper>
@@ -60,14 +59,15 @@ const RootIndex = ({ data }) => {
 
         <Container className={styles.container}>
           <div>
-            <Hero title={news.title} />
+            <Seo title={posts[1].title} />
+            <Hero title={posts[1].title} />
             <div className={styles.container2}>
               <Wrapper>
                 <div className={styles.article}>
                   <div
                     className={styles.body}
                     dangerouslySetInnerHTML={{
-                      __html: news.info?.childMarkdownRemark?.html,
+                      __html: posts[1].info?.childMarkdownRemark?.html,
                     }}
                   />
                 </div>

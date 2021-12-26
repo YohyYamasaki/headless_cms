@@ -1,0 +1,15 @@
+// {
+//   "name": "Yuto HOSAKA (TMU) - 東京都立大学情報処理施設",
+//   "description": "Yuto Hosaka. Department of Chemistry, Tokyo Metropolitan University",
+//   "keywords": ["contentful", "gatsby", "static", "ssg"],
+//   "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+//   "success_url": "/",
+//   "buildpacks": [
+//     {
+//       "url": "heroku/nodejs"
+//     },
+//     {
+//       "url": "https://github.com/heroku/heroku-buildpack-static"
+//     }
+//   ]
+// }
